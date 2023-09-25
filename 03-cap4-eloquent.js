@@ -54,7 +54,7 @@ console.log(rangeTwo(10, 1, -2));
 
 function revertArray(array) {
   const newArray = [];
-  for(let i = array.length -1; i >= 0; i --) {
+  for (let i = array.length - 1; i >= 0; i--) {
     newArray.push(array[i]);
     array.pop();
   }
@@ -64,7 +64,7 @@ function revertArray(array) {
   }
 }
 
-const arrayTwo = [1,2,3,4,5,6];
+const arrayTwo = [1, 2, 3, 4, 5, 6];
 console.log('array antes de ser mutado', arrayTwo);
 revertArray(arrayTwo);
 console.log('array después de ser mutado', arrayTwo);
@@ -85,3 +85,21 @@ console.log('array después de ser mutado', arrayTwo);
 *? Si aún no lo has hecho, también escribe una versión recursiva de posicion.
 
  */
+
+const arr = [1, 2, 3, 4, 5];
+const list = {};
+
+function arrayList(arr) {
+  for (let i = arr.length; i > 0; i--) {
+    list.value = i
+    if (i === arr.length) {
+      list.rest = {...list, rest: null};
+    } else {
+      list.rest = { ...list }
+    }
+  };
+  console.log(list);
+};
+
+
+arrayList(arr);
